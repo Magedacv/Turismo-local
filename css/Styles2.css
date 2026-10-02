@@ -1,0 +1,615 @@
+
+.gastronomy-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(7, 152, 209, 0.13) 2px,
+            transparent 3px
+        ) 8% 12% / 110px 110px,
+
+        radial-gradient(
+            circle,
+            rgba(7, 152, 209, 0.10) 2px,
+            transparent 3px
+        ) 92% 65% / 150px 150px,
+
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #ffffff 55%,
+            #f4fbfd 100%
+        );
+
+    overflow: hidden;
+}
+
+.gastronomy-page::before {
+    content: "";
+
+    position: absolute;
+
+    top: 80px;
+    right: -150px;
+
+    width: 650px;
+    height: 330px;
+
+    border: 1px dashed rgba(7, 152, 209, 0.15);
+    border-left: none;
+
+    border-radius: 0 240px 240px 0;
+
+    transform: rotate(-10deg);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.gastronomy-page::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 450px;
+    left: -180px;
+
+    width: 650px;
+    height: 320px;
+
+    border: 1px solid rgba(7, 152, 209, 0.10);
+    border-right: none;
+
+    border-radius: 240px 0 0 240px;
+
+    transform: rotate(10deg);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.gastronomy-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 430px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(400px, 0.9fr);
+
+    align-items: center;
+
+    gap: 65px;
+
+    padding:
+        55px
+        max(60px, calc((100% - 1280px) / 2))
+        65px;
+
+    background: transparent;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 22px;
+
+    color: #52647a;
+
+    font-size: 13px;
+}
+
+.breadcrumb a {
+    color: #0798d1;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.breadcrumb span {
+    color: #a7b3bd;
+}
+
+.breadcrumb strong {
+    color: #52647a;
+
+    font-weight: 600;
+}
+
+.hero-label {
+    display: inline-block;
+
+    margin-bottom: 13px;
+
+    color: #0798d1;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+
+    color: #0d1b34;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    line-height: 1.05;
+
+    font-weight: 700;
+}
+
+.hero-content h1 span {
+    display: block;
+
+    color: #0798d1;
+}
+
+.hero-content p {
+    max-width: 700px;
+
+    margin-bottom: 14px;
+
+    color: #52647a;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 330px;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: #eef9fd;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(13, 27, 52, 0.10);
+}
+
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: #0798d1;
+}
+
+.hero-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.03);
+}
+
+.hero-image-caption {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 20px;
+    bottom: 20px;
+
+    padding: 9px 14px;
+
+    background: rgba(13, 27, 52, 0.88);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 3px;
+}
+
+.experiences-section {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding:
+        65px
+        max(60px, calc((100% - 1280px) / 2))
+        70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 30px;
+
+    background: transparent;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.experience {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #cfdfe7;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(13, 27, 52, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.experience:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 35px rgba(13, 27, 52, 0.10);
+}
+
+.experience-image {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    background: #eef9fd;
+}
+
+.experience-image::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #0798d1;
+}
+
+.experience-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.experience:hover .experience-image img {
+    transform: scale(1.04);
+}
+
+.experience-content {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 28px 27px 30px;
+}
+
+.experience-category {
+    margin-bottom: 9px;
+
+    color: #0798d1;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.experience-content h2 {
+    margin-bottom: 15px;
+
+    color: #0d1b34;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+}
+
+.experience-content p {
+    margin-bottom: 14px;
+
+    color: #52647a;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.location {
+    position: relative;
+
+    margin-top: auto;
+
+    padding: 16px 17px;
+
+    background: #eef9fd;
+
+    border: 1px solid #c8e6f0;
+
+    border-left: 3px solid #0798d1;
+
+    border-radius: 6px;
+}
+
+.location strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #0d1b34;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.location p {
+    margin: 0;
+
+    color: #52647a;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.map-section {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding:
+        30px
+        max(60px, calc((100% - 1280px) / 2))
+        100px;
+
+    text-align: center;
+
+    background: transparent;
+}
+
+.map-heading {
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+}
+
+.map-heading > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #0798d1;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.map-heading h2 {
+    margin-bottom: 12px;
+
+    color: #0d1b34;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+}
+
+.map-heading p {
+    color: #52647a;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+#map {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: #eef9fd;
+
+    border: 1px solid #cfdfe7;
+
+    border-radius: 0;
+
+    box-shadow:
+        0 10px 30px rgba(13, 27, 52, 0.06);
+}
+
+
+#map iframe {
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0 !important;
+
+    max-width: none !important;
+}
+
+@media (max-width: 1000px) {
+
+    .gastronomy-hero {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .hero-image {
+        height: 360px;
+    }
+
+    .experiences-section {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+
+    .gastronomy-hero {
+        padding:
+            40px 25px 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        height: 280px;
+    }
+
+    .experiences-section {
+        grid-template-columns: 1fr;
+
+        padding:
+            45px 25px 60px;
+    }
+
+    .map-section {
+        padding:
+            30px 25px 70px;
+    }
+
+    .map-heading h2 {
+        font-size: 27px;
+    }
+
+    #map {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .gastronomy-hero {
+        padding:
+            35px 18px 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .experiences-section {
+        padding:
+            35px 18px 50px;
+    }
+
+    .map-section {
+        padding:
+            30px 18px 60px;
+    }
+
+    .map-heading h2 {
+        font-size: 24px;
+    }
+
+    #map {
+        height: 350px;
+    }
+}
